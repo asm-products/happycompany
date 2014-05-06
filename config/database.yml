@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: happycompany-dev
+  pool: 5
+  host: localhost
+  username: action
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: happycompany-test
+  pool: 5
+  host: localhost
+  username: action
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: happycompany-prod
+  pool: 5
+  host: localhost
+  username: action
+  password:

@@ -1,0 +1,124 @@
+// _mixins
+// Big thanks to Sebastian Ekström (http://zerosixthree.se) for bundling all these mixins.
+
+// ---------------------------------------
+// Rem font size with pixel fallback
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// Usage: p { @include font-size(14px); }
+
+// ---------------------------------------
+// Breakpoints
+
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+// ---------------------------------------
+// SVG background images with PNG and retina fallback
+
+$image-path: '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+@mixin background-image($name, $size:false){
+    background-image: url(#{$image-path}/#{$name}.svg);
+    @if($size){
+        background-size: $size;
+    }
+    .no-svg &{
+        background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+          background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+        }
+    }
+}
+
+// Usage: body { @include background-image('pattern'); }
+
+// ---------------------------------------
+// Animations and Keyframes
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }  
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }  
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+// ---------------------------------------
+// Transitions
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// ---------------------------------------
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// ---------------------------------------
+// Convert px to em and vice versa
+@function pxtoem($target){
+	@return ($target/$body_font-size)+0em;
+}
+@function emtopx($target, $body_font-size){
+	@return ($target*$context)+0px;
+}
+
+// ---------------------------------------
+// Vertical align
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.vertical-align { @extend %vertical-align; }

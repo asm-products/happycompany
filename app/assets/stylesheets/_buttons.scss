@@ -1,0 +1,40 @@
+.btn {
+	display: inline-block;
+	padding: 14px 20px 16px 20px;
+	margin: 10px 0 0 0;
+	font-size: 21px;
+	border: 0;
+	outline: none;
+	&.primary {
+		position: relative;
+		font-family: $font-family_sans;
+		font-weight: 700;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	&.black {
+		color: #ebe9cd;
+		background: #444;
+		&:hover {
+			background: #555;
+		}
+		&:active {
+			top: 2px;
+			background: #666;
+		}
+	}
+	&.green {
+		color: #fff;
+		background: #3cce81;
+		&:hover {
+			background: #4BE493;
+		}
+		&:active {
+			top: 2px;
+			background: #35B672;
+		}
+	}
+}
+
+

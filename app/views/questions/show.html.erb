@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @question.content %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @question.desc %>
+</p>
+
+<p>
+  <strong>Visibility:</strong>
+  <%= @question.visibility %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @question.company_id %>
+</p>
+
+<p>
+  <strong>Timer:</strong>
+  <%= @question.timer_id %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |

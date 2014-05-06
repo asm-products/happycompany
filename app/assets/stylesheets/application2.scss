@@ -1,0 +1,1101 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@charset "UTF-8";
+/* normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, _normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, _normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 43, _normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 55, _normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 65, _normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 76, _normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 87, _normalize.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 96, _normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 107, _normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 116, _normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 124, _normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 133, _normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 142, _normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 151, _normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 160, _normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 167, _normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 171, _normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 182, _normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 190, _normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 201, _normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 209, _normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 219, _normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 230, _normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 254, _normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 264, _normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 276, _normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 291, _normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 301, _normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 310, _normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 320, _normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 333, _normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 345, _normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 355, _normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 369, _normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 377, _normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 388, _normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 397, _normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 406, _normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 417, _normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 423, _normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 1, _resetmoar.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 4, _resetmoar.scss */
+ul {
+  margin: 0;
+}
+
+/* Kellum Method for Image Replacement */
+/* line 2, _helpers.scss */
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Clearfix  */
+/* line 9, _helpers.scss */
+.clearfix:after, .container:after, header:after, .content:after, .content .testimonials:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 17, _helpers.scss */
+* html .clearfix, * html .container, * html header, * html .content, * html .content .testimonials, .content * html .testimonials {
+  zoom: 1;
+}
+
+/* IE6 */
+/* line 18, _helpers.scss */
+*:first-child + html .clearfix, *:first-child + html .container, *:first-child + html header, *:first-child + html .content, *:first-child + html .content .testimonials, .content *:first-child + html .testimonials {
+  zoom: 1;
+}
+
+/* IE7 */
+/* line 117, _mixins.scss */
+.vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 1, _layout.scss */
+.container {
+  width: 60em;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* GRID */
+/* line 9, _layout.scss */
+.column, header .logo, header ul, .content .testimonials div {
+  float: left;
+  box-sizing: border-box;
+}
+/* line 12, _layout.scss */
+.column.w10, header .w10.logo, header ul.w10, .content .testimonials div.w10 {
+  width: 10%;
+}
+/* line 13, _layout.scss */
+.column.w20, header .w20.logo, header ul.w20, .content .testimonials div.w20 {
+  width: 20%;
+}
+/* line 14, _layout.scss */
+.column.w30, header .w30.logo, header ul.w30, .content .testimonials div.w30 {
+  width: 30%;
+}
+/* line 15, _layout.scss */
+.column.w40, header .w40.logo, header ul.w40, .content .testimonials div.w40 {
+  width: 40%;
+}
+/* line 16, _layout.scss */
+.column.w50, header .w50.logo, header ul.w50, .content .testimonials div.w50 {
+  width: 50%;
+}
+/* line 17, _layout.scss */
+.column.w60, header .w60.logo, header ul.w60, .content .testimonials div.w60 {
+  width: 60%;
+}
+/* line 18, _layout.scss */
+.column.w70, header .w70.logo, header ul.w70, .content .testimonials div.w70 {
+  width: 70%;
+}
+/* line 19, _layout.scss */
+.column.w80, header .w80.logo, header ul.w80, .content .testimonials div.w80 {
+  width: 80%;
+}
+/* line 20, _layout.scss */
+.column.w90, header .w90.logo, header ul.w90, .content .testimonials div.w90 {
+  width: 90%;
+}
+/* line 21, _layout.scss */
+.column.w100, header .w100.logo, header ul.w100, .content .testimonials div.w100 {
+  width: 100%;
+}
+
+/* line 2, _typography.scss */
+h1 {
+  font-family: "Lato", serif;
+  font-size: 3em;
+  font-weight: 800;
+}
+
+/* line 8, _typography.scss */
+h2, h3 {
+  font-size: 3em;
+  font-weight: 200;
+  margin: 0 0 40px 0;
+  padding: 0;
+  line-height: 1.2em;
+}
+
+/* line 18, _typography.scss */
+
+/* line 26, _typography.scss */
+h3 {
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  padding: 25px 0;
+  margin: 0 0 20px 0;
+  text-transform: lowercase;
+}
+
+/* line 34, _typography.scss */
+p {
+  font-family: "Lato", "Times New Roman", serif;
+  font-size: 21px;
+  line-height: 1.3em;
+}
+
+/* line 39, _typography.scss */
+.testimonials p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.4em;
+}
+
+/* line 45, _typography.scss */
+.testimonials h4 {
+  font-size: 21px;
+  font-weight: 400;
+  margin: 10px 0 0 0;
+}
+
+/* line 50, _typography.scss */
+.testimonials h4 span {
+  display: block;
+  margin: 5px 0 0 0;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+
+/* line 1, _buttons.scss */
+.btn {
+  display: inline-block;
+  padding: 14px 20px 16px 20px;
+  font-size: 21px;
+  border: 0;
+}
+/* line 7, _buttons.scss */
+.btn.primary {
+  position: relative;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 17, _buttons.scss */
+.btn.black {
+  color: #ebe9cd;
+  background: #444;
+}
+/* line 20, _buttons.scss */
+.btn.black:hover {
+  background: #555;
+}
+/* line 23, _buttons.scss */
+.btn.black:active {
+  top: 2px;
+  background: #666;
+}
+/* line 28, _buttons.scss */
+.btn.green {
+  color: #ebe9cd;
+  background: #5fb90f;
+}
+/* line 31, _buttons.scss */
+.btn.green:hover {
+  background: #72C925;
+}
+/* line 34, _buttons.scss */
+.btn.green:active {
+  top: 2px;
+  background: #509d0c;
+}
+/* line 39, _buttons.scss */
+.btn.tree {
+  color: #0b77d0;
+  background: rgba(0, 0, 0, 0.6);
+}
+/* line 42, _buttons.scss */
+.btn.tree:hover {
+  background: white;
+}
+/* line 45, _buttons.scss */
+.btn.tree:active {
+  top: 2px;
+  background: #509d0c;
+}
+
+/* line 52, _buttons.scss */
+#learn-more {
+  width: 141px;
+  height: 104px;
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  margin-left: -70px;
+  background: url("../images/learnmore.png");
+}
+
+/*
+ * Pikaday
+ * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
+/* line 8, _pikaday.scss */
+.pika-single {
+  z-index: 9999;
+  display: block;
+  position: relative;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+/* line 24, _pikaday.scss */
+.pika-single:before,
+.pika-single:after {
+  content: " ";
+  display: table;
+}
+
+/* line 28, _pikaday.scss */
+.pika-single:after {
+  clear: both;
+}
+
+/* line 29, _pikaday.scss */
+.pika-single {
+  *zoom: 1;
+}
+
+/* line 31, _pikaday.scss */
+.pika-single.is-hidden {
+  display: none;
+}
+
+/* line 35, _pikaday.scss */
+.pika-single.is-bound {
+  position: absolute;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 40, _pikaday.scss */
+.pika-lendar {
+  float: left;
+  width: 240px;
+  margin: 8px;
+}
+
+/* line 46, _pikaday.scss */
+.pika-title {
+  position: relative;
+  text-align: center;
+}
+
+/* line 51, _pikaday.scss */
+.pika-label {
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  z-index: 9999;
+  overflow: hidden;
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+/* line 64, _pikaday.scss */
+.pika-title select {
+  cursor: pointer;
+  position: absolute;
+  z-index: 9998;
+  margin: 0;
+  left: 0;
+  top: 5px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+/* line 76, _pikaday.scss */
+.pika-prev,
+.pika-next {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 30px;
+  /* hide text using text-indent trick, using width value (it's enough) */
+  text-indent: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  opacity: .5;
+  *position: absolute;
+  *top: 0;
+}
+
+/* line 99, _pikaday.scss */
+.pika-prev:hover,
+.pika-next:hover {
+  opacity: 1;
+}
+
+/* line 104, _pikaday.scss */
+.pika-prev,
+.is-rtl .pika-next {
+  float: left;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");
+  *left: 0;
+}
+
+/* line 111, _pikaday.scss */
+.pika-next,
+.is-rtl .pika-prev {
+  float: right;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");
+  *right: 0;
+}
+
+/* line 118, _pikaday.scss */
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
+  cursor: default;
+  opacity: .2;
+}
+
+/* line 123, _pikaday.scss */
+.pika-select {
+  display: inline-block;
+  *display: inline;
+}
+
+/* line 128, _pikaday.scss */
+.pika-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+}
+
+/* line 136, _pikaday.scss */
+.pika-table th,
+.pika-table td {
+  width: 14.285714285714286%;
+  padding: 0;
+}
+
+/* line 141, _pikaday.scss */
+.pika-table th {
+  color: #999;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 149, _pikaday.scss */
+.pika-button {
+  cursor: pointer;
+  display: block;
+  outline: none;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  padding: 5px;
+  color: #666;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  background: #f5f5f5;
+}
+
+/* line 164, _pikaday.scss */
+.is-today .pika-button {
+  color: #33aaff;
+  font-weight: bold;
+}
+
+/* line 169, _pikaday.scss */
+.is-selected .pika-button {
+  color: #fff;
+  font-weight: bold;
+  background: #33aaff;
+  box-shadow: inset 0 1px 3px #178fe5;
+  border-radius: 3px;
+}
+
+/* line 177, _pikaday.scss */
+.is-disabled .pika-button {
+  pointer-events: none;
+  cursor: default;
+  color: #999;
+  opacity: .3;
+}
+
+/* line 184, _pikaday.scss */
+.pika-button:hover {
+  color: #fff !important;
+  background: #ff8000 !important;
+  box-shadow: none !important;
+  border-radius: 3px !important;
+}
+
+/* line 11, master.scss */
+html {
+  height: 100%;
+}
+
+/* line 14, master.scss */
+body {
+  font: 100% "Lato", sans-serif;
+  color: #444444;
+  background: #fff;
+  height: 100%;
+  padding-top: 40px;
+}
+
+/* NAV */
+/* line 23, master.scss */
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 99;
+  margin-top: 0px;
+  line-height: 100px;
+  -webkit-transition: height 0s, background 0s;
+}
+/* line 32, master.scss */
+header .container {
+  position: relative;
+  z-index: 99;
+}
+/* line 37, master.scss */
+header .logo {
+  width: 16%;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  font-size: 27px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+/* line 49, master.scss */
+header .logo span {
+  margin-right: -4px;
+  font-size: 35px;
+  font-family: "Lato", cursive;
+  font-weight: 100;
+  text-transform: none;
+}
+/* line 57, master.scss */
+header ul {
+  float: right;
+  width: 85%;
+  margin-right: -40px;
+}
+/* line 62, master.scss */
+header ul li {
+  float: left;
+  list-style: none;
+  font-size: 21px;
+  letter-spacing: -0.2px;
+}
+/* line 67, master.scss */
+header ul li a {
+  margin: 0 16px;
+  padding: 30px 0 6px 0;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+/* line 72, master.scss */
+header ul li a:hover {
+  color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* line 77, master.scss */
+header ul li.active a {
+  color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* line 85, master.scss */
+header.extended {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  margin-top: 0px;
+  line-height: 80px;
+  background: rgba(0, 0, 0, 0.65);
+  -webkit-transition: .8s color, .6s background;
+}
+/* line 93, master.scss */
+header.extended .logo {
+  color: #fff;
+}
+/* line 97, master.scss */
+header.extended ul li a {
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+/* line 100, master.scss */
+header.extended ul li a:hover {
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* line 105, master.scss */
+header.extended ul li.active a {
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* line 112, master.scss */
+.content {
+  position: relative;
+  z-index: 10;
+  margin-top: 80px;
+}
+/* line 118, master.scss */
+.content .main {
+  padding: 50px 0;
+}
+/* line 121, master.scss */
+.content .main h2 {
+  font-size: 90px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+/* line 126, master.scss */
+.content .main h2 span {
+
+}
+/* line 133, master.scss */
+.content .main .btn {
+  margin-top: 50px;
+}
+/* line 138, master.scss */
+.content .testimonials {
+  padding: 50px 0;
+}
+/* line 143, master.scss */
+.content .testimonials div {
+  width: 30%;
+}
+/* line 148, master.scss */
+.content .testimonials div:nth-child(3) {
+  width: 37.33%;
+  padding: 0 4%;
+  margin: 0 1%;
+}
+
+/* line 159, master.scss */
+p label {
+  display: block;
+}
+
+/* line 163, master.scss */
+.footer {
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+  padding: 60px 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------------------------- */
+body {
+	padding-top: 0;
+}
+header {
+	padding: 20px 0;
+	height: auto;
+	background: #444;
+	line-height: 1.3em;
+}
+header .logo {
+	width: 22%;
+	height: 30px;
+	background: url(image-path('logo.png')) no-repeat;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+header .nav {
+	width: 75%;
+	margin-top: 4px;
+	li {
+		font-size: 18px;
+		letter-spacing: 0;
+		a {
+			color: rgba(255,255,255,.5);
+		}
+		&:hover {
+			color: rgba(255,255,255,.5);
+		}
+	}
+	&.active a {
+		color: rgba(255,255,255,.8);
+	}
+}

@@ -1,0 +1,18 @@
+/* Kellum Method for Image Replacement */
+.hide-text {
+	text-indent: 100%;
+	white-space: nowrap;	
+	overflow: hidden;
+}
+
+/* Clearfix  */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */

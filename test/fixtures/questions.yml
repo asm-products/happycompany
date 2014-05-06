@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyString
+  desc: MyString
+  visibility: MyString
+  company_id: 1
+  timer_id: 1
+
+two:
+  content: MyString
+  desc: MyString
+  visibility: MyString
+  company_id: 1
+  timer_id: 1
