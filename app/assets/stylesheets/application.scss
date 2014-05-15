@@ -8,36 +8,33 @@ body {
 	color: #444;
 	background: #fff;
 	height: 100%;
+	padding-top: 71px;
 }
 
 /* HEADER */
-header {
-	padding: 20px 0;
+.navbar {
+	padding: 20px 0 0 0;
 	height: auto;
 	background: #373737;
 	line-height: 1.3em;
-	@extend .clearfix;
-	.logo {
-		width: 22%;
-		height: 30px;
+	.navbar-brand {
+		width: 210px;
 		margin: 0;
 		background: url(image-path('logo.png')) no-repeat;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
 	}
-	ul.nav {
-		position: absolute;
-    	right: 0;
-		margin-top: 3px;
+	.navbar-nav {
 		li {
-			float: left;
-			list-style: none;
 			font-size: 18px;
-			letter-spacing: 0;
 			a {
-				margin: 0 16px;
-				padding: 30px 0 6px 0;
+				padding: 4px 0 4px 0;
+				margin: 0 15px;
 				color: rgba(255,255,255,.5);
 				border-bottom: 1px solid rgba(255,255,255,.0);
 				&:hover {
+					background: none;
 					color: rgba(255,255,255,.7);
 					border-bottom: 1px solid rgba(255,255,255,.1);
 				}
