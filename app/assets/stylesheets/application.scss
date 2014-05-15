@@ -1,18 +1,11 @@
-@import "_normalize";
-@import "_resetmoar";
-@import "_helpers";
-@import "_mixins";
-@import "_variables";
-@import "_layout";
-@import "_typography";
-@import "_buttons";
+@import "_bootstrap";
 
 html {
 	height: 100%;
 }
 body {
-	font: 100% $font-family_primary;
-	color: $primary-color;
+	font-family: "Lato", Arial, sans-serif;
+	color: #444;
 	background: #fff;
 	height: 100%;
 }
@@ -25,17 +18,14 @@ header {
 	line-height: 1.3em;
 	@extend .clearfix;
 	.logo {
-		@extend .hide-text;
-		@extend .column;
 		width: 22%;
 		height: 30px;
 		margin: 0;
 		background: url(image-path('logo.png')) no-repeat;
 	}
 	ul.nav {
-		@extend .column;
 		position: absolute;
-    right: 0;
+    	right: 0;
 		margin-top: 3px;
 		li {
 			float: left;
@@ -119,16 +109,13 @@ header {
 	position: relative;
 	z-index: 10;
 	margin-top: 80px;
-	@extend .clearfix;
 	
 	.main {
 		padding: 50px 0;		
 	}
 	.testimonials {
 		padding: 50px 0;
-		@extend .clearfix;
 		div {
-			@extend .column;
 			width: 30%;
 			&:nth-child(2) {
 			}
@@ -162,7 +149,6 @@ form {
 }
 .actions {
 	input, button {
-		@extend .btn, .primary, .green;
 	}
 }
 
