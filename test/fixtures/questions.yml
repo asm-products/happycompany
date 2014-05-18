@@ -2,14 +2,14 @@
 
 one:
   content: MyString
-  desc: MyString
+  desc: MyText
   visibility: MyString
-  company_id: 1
-  timer_id: 1
+  company_id: 
+  timer_id: 
 
 two:
   content: MyString
-  desc: MyString
+  desc: MyText
   visibility: MyString
-  company_id: 1
-  timer_id: 1
+  company_id: 
+  timer_id: 
