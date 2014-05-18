@@ -1,0 +1,2 @@
+class SpecController < ApplicationController
+end

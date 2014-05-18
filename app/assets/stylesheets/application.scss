@@ -129,19 +129,18 @@ body {
 
 .question {
 	&.single {
+		@extend .col-md-offset-3, .col-md-6;
 		text-align: center;
 		margin-bottom: 60px;
-		h2 {
-			font-weight: 600;
-		}
-		h5 {
-			text-transform: uppercase;
-			color: #666;
-			letter-spacing: 5px;
-		}
 		textarea {
 			width: 100%;
+			padding: 10px;
 			margin: 20px 0 15px 0;
+			border: 1px solid #ddd;
+			&:focus {
+				outline: none;
+				border: 1px solid #ccc;
+			}
 		}
 	}
 	&.admin {
@@ -153,6 +152,36 @@ body {
 			}
 		}
 	}
+}
+
+.answers {
+	@extend .row;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	.question {
+		@extend .row;
+		border-bottom: 1px dashed rgba(0,0,0,.05);
+		h2 {
+			@extend .col-md-9;
+		}
+		h5 {
+			@extend .col-md-3;
+			text-align: right;
+		}
+	}
+	.answer {
+		@extend .col-md-6;
+		.author {}
+		.job-title {}
+	}
+}
+
+h2 {
+	font-weight: 600;
+}
+h5 {
+	text-transform: uppercase;
+	color: #666;
+	letter-spacing: 5px;
 }
 
 p label {

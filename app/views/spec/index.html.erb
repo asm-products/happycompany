@@ -1,0 +1,50 @@
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>
+<script>
+  !function ($) {
+    $(function(){
+      window.prettyPrint && prettyPrint()
+    })
+  }(window.jQuery)
+</script>
+
+<h1>Development</h1>
+
+<h2></h2>
+
+<ul>
+	<li>
+		<h3>Scaffolding basics</h3>
+		<ul>
+			<li>
+				<code class="prettyprint">rails generate scaffold QuestionList company_id:reference</code>
+			</li>
+			<li>
+				<code class="prettyprint">rails generate scaffold Question content:string desc:text visibility:string questionlist_id:references company_id:references timer_id:references</code>
+			</li>
+			<li>
+				<code class="prettyprint">rails generate scaffold Timer name:string timedate_start:string timedate_end:string question_id:references</code>
+			</li>
+			<li>
+				<code class="prettyprint">rails generate scaffold Answer content:text question_id:references user_id:references</code>
+			</li>
+			<li>
+				<code class="prettyprint">rails generate scaffold Company name:string url:string owner_id:references</code>
+			</li>
+			<li>
+				That should associate related models, or most of them.
+			</li>
+		</ul>
+	</li>
+	<li>
+		<h3>Admin page for questions and questions lists</h3>
+		<p>This is primary for me so I can create default set of questions, later this part could be modified to create interface that would allow company owners to modify questions for their company.</p>
+	</li>
+	<li>
+		<h3>Admin page for timers</h3>
+		<p>Timers are basicly defining when and what question is going to be active/visible. They are problematic because it's possible that not all employess and especially not all companies are in the same timezone.</p>
+	</li>
+	<li>
+		<h3>Connecting timers with questions and making it possible to choose timer when editing a question</h3>
+		<p>Timers are basicly defining when and what question is going to be active/visible.</p>
+	</li>
+</ul>
