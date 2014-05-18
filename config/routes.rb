@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  resources :timers
-
-  resources :answers
-
-  resources :companies
 
   resources :questions
-
+  resources :timers
+  resources :answers
+  resources :companies
   resources :spec
+  resources :admin
 
   devise_for :users
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

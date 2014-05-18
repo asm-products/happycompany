@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @timer.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @timer.desc %>
+</p>
+
+<p>
+  <strong>Timedate start:</strong>
+  <%= @timer.timedate_start %>
+</p>
+
+<p>
+  <strong>Timedate end:</strong>
+  <%= @timer.timedate_end %>
+</p>
+
+<p>
+  <strong>Lenght:</strong>
+  <%= @timer.lenght %>
+</p>
+
+<p>
+  <strong>Recurring:</strong>
+  <%= @timer.recurring %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @timer.question_id %>
+</p>
+
+<%= link_to 'Edit', edit_timer_path(@timer) %> |
+<%= link_to 'Back', timers_path %>

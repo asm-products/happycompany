@@ -24,19 +24,22 @@
 				<ul class="nav navbar-nav navbar-right">
 					<% if user_signed_in? %>
 					<li <% if current_page?(questions_path) %>class="active"<% end %>>
-						<%= link_to 'Questions', questions_path %>
+						<%= link_to 'Question', questions_path %>
 					</li>
 					<li <% if current_page?(timers_path) %>class="active"<% end %>>
 						<%= link_to 'Timers', timers_path %>
 					</li>
 					<li <% if current_page?(answers_path) %>class="active"<% end %>>
-						<%= link_to 'Answers', answers_path %>
+						<%= link_to 'Previously', answers_path %>
 					</li>
 					<li <% if current_page?(companies_path) %>class="active"<% end %>>
 						<%= link_to 'Companies', companies_path %>
 					</li>
 					<li <% if current_page?(edit_user_registration_path) %>class="active"<% end %>>
 						<%= link_to 'Settings', edit_user_registration_path %>
+					</li>
+					<li <% if current_page?(admin_index_path) %>class="active"<% end %>>
+						<%= link_to 'Admin', admin_index_path %>
 					</li>
 					<li>
 						<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
