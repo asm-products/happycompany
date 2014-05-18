@@ -26,6 +26,9 @@
 					<li <% if current_page?(questions_path) %>class="active"<% end %>>
 						<%= link_to 'Questions', questions_path %>
 					</li>
+					<li <% if current_page?(timers_path) %>class="active"<% end %>>
+						<%= link_to 'Timers', timers_path %>
+					</li>
 					<li <% if current_page?(answers_path) %>class="active"<% end %>>
 						<%= link_to 'Answers', answers_path %>
 					</li>

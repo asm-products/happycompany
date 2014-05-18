@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  desc: MyString
+  timedate_start: MyString
+  timedate_end: MyString
+  lenght: MyString
+  recurring: MyString
+  question_id_id: 
+
+two:
+  name: MyString
+  desc: MyString
+  timedate_start: MyString
+  timedate_end: MyString
+  lenght: MyString
+  recurring: MyString
+  question_id_id: 
